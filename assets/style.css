@@ -1,0 +1,103 @@
+/* Cleaned stylesheet for proposal site */
+body {
+  background: linear-gradient(135deg, #f8e8ee 0%, #ffe6f0 100%);
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 32px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease both;
+}
+
+.hero {
+  text-align: center;
+  background: rgba(255,255,255,0.95);
+  padding: 2.4em 1.8em;
+  border-radius: 20px;
+  box-shadow: 0 12px 36px rgba(215,50,90,0.08);
+  max-width: 640px;
+  width: 94%;
+}
+
+.hero-gif {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 0.6em auto;
+}
+
+.title {
+  color: #d72660;
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  margin: 0.2em 0 0.3em 0;
+}
+
+.subtitle {
+  color: #7a3b6c;
+  font-size: 1rem;
+  margin-bottom: 1.4em;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.surprise-gif {
+  width: 260px;
+  max-width: 92%;
+  border-radius: 12px;
+  display: block;
+  margin: 1em auto;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.game-area { background: #fff; }
+
+.timer { font-weight: 700; }
+
+.riddle-controls { display:flex; gap:10px; justify-content:center; margin-top:1em; flex-wrap:wrap; }
+
+/* Confetti pieces */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 16px;
+  opacity: 0.95;
+  z-index: 9999;
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+button, .main-btn {
+  background: linear-gradient(90deg, #d72660 60%, #ffb6c1 100%);
+  color: #fff;
+  border: none;
+  padding: 0.9em 1.6em;
+  border-radius: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.6em;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(215,50,90,0.08);
+  transition: transform .18s ease, filter .12s ease;
+}
+
+button:hover, .main-btn:hover { transform: translateY(-3px); filter: brightness(1.04); }
+
+input[type="text"] {
+  border: 1px solid #d72660;
+  border-radius: 8px;
+  padding: 0.6em 0.9em;
+  font-size: 1rem;
+  margin-top: 0.8em;
+  outline: none;
+}
+
+input[type="text"]:focus { border: 2px solid #7a3b6c; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes popIn { 0% { transform: scale(.98); opacity: 0 } 100% { transform: scale(1); opacity: 1 } }
+
+@media (max-width:420px){ .title{ font-size:1.4rem } .hero{ padding:1.4em } }
